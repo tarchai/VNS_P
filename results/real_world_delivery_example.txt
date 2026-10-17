@@ -1,0 +1,13 @@
+REAL WORLD EXAMPLE: ONE VEHICLE / FIVE CUSTOMERS (TOY TSP)
+All coordinates are synthetic; distances are Euclidean units, NOT road km.
+Objective: minimize total round trip distance to depot (stop 0).
+Neighborhoods: swap any customers, or reverse a segment (2-opt).
+Initial route: (0, 1, 3, 5, 2, 4, 0)
+Initial distance: 37.85359842
+Best route: (0, 1, 2, 3, 4, 5, 0)
+Best distance: 23.18118795
+Improvement: 14.67241047 distance units
+
+FIRST TWO ITERATIONS:
+Iteration 1: shake=(0, 1, 2, 5, 3, 4, 0), local=(0, 1, 2, 3, 4, 5, 0), ACCEPT, best=23.18118795
+Iteration 2: shake=(0, 4, 2, 3, 1, 5, 0), local=(0, 1, 2, 3, 4, 5, 0), REJECT, best=23.18118795

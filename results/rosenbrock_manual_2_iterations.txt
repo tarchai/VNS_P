@@ -1,0 +1,53 @@
+Rosenbrock | FIRST TWO ACTUAL VNS ITERATIONS | seed=7
+One iteration = one Shaking + Local Search + acceptance check.
+The sampled Shaking points and LS results below come from run_vns, not invented.
+LS: 8 directions; step starts 0.25, halves when no better neighbor;
+    minimum step 0.0001.
+Numeric expressions show rounded coordinates, final fitness uses full precision.
+For ALL local-search moves, see the corresponding local_trace_seed7.csv file.
+
+====================================================================
+ITERATION 1 | k=1
+1) Current objective:
+   f(-1.000000000, 1.000000000) = [1-(-1.000000000)]^2 + 100*[(1.000000000)-(-1.000000000)^2]^2 = 4 + 0 = 4
+2) Shaking:
+   Current (-1.0, 1.0) -> Shaking (-1.1311600246779814, 1.2621513763710643)
+   f(-1.131160025, 1.262151376) = [1-(-1.131160025)]^2 + 100*[(1.262151376)-(-1.131160025)^2]^2 = 4.541843051 + 0.03017733572 = 4.5720203865
+3) Local Search: accepted better neighbors:
+   move 000: (-1.131160025, 1.262151376), f=4.5720203865, step=0.2500000
+   move 001: (-1.099910025, 1.230901376), f=4.4541402168, step=0.0312500
+   move 002: (-1.099910025, 1.199651376), f=4.4199257544, step=0.0312500
+   move 003: (-1.068660025, 1.168401376), f=4.34887684174, step=0.0312500
+   ... 235 additional moves (see CSV) ...
+   move 239: (0.928410288, 0.861272470), f=0.00517040569218, step=0.0004883
+   move 240: (0.928410288, 0.861760751), f=0.00512850610354, step=0.0004883
+   Total accepted Local Search moves: 240
+   Final local-search evaluation:
+   f(0.928410288, 0.861760751) = [1-(0.928410288)]^2 + 100*[(0.861760751)-(0.928410288)^2]^2 = 0.00512508689 + 3.419213809e-06 = 0.00512850610354
+4) Neighborhood Change:
+   Compare candidate f=0.00512850610354 vs current f=4.
+   Decision: ACCEPT -> reset k=1
+   New current point (0.9284102878220186, 0.8617607513710643), Best Fitness=0.00512850610354, next k=1
+
+====================================================================
+ITERATION 2 | k=1
+1) Current objective:
+   f(0.928410288, 0.861760751) = [1-(0.928410288)]^2 + 100*[(0.861760751)-(0.928410288)^2]^2 = 0.00512508689 + 3.419213809e-06 = 0.00512850610354
+2) Shaking:
+   Current (0.9284102878220186, 0.8617607513710643) -> Shaking (0.771336361713695, 0.6428758616791501)
+   f(0.771336362, 0.642875862) = [1-(0.771336362)]^2 + 100*[(0.642875862)-(0.771336362)^2]^2 = 0.05228705947 + 0.2295950605 = 0.281882120015
+3) Local Search: accepted better neighbors:
+   move 000: (0.771336362, 0.642875862), f=0.281882120015, step=0.2500000
+   move 001: (0.896336362, 0.767875862), f=0.137076717625, step=0.1250000
+   move 002: (0.833836362, 0.705375862), f=0.0377967826939, step=0.0625000
+   move 003: (0.865086362, 0.736625862), f=0.0320045361336, step=0.0312500
+   ... 235 additional moves (see CSV) ...
+   move 239: (0.963230893, 0.928032112), f=0.00135673527655, step=0.0004883
+   move 240: (0.963719174, 0.928520393), f=0.00132178580486, step=0.0004883
+   Total accepted Local Search moves: 240
+   Final local-search evaluation:
+   f(0.963719174, 0.928520393) = [1-(0.963719174)]^2 + 100*[(0.928520393)-(0.963719174)^2]^2 = 0.00131629832 + 5.487485124e-06 = 0.00132178580486
+4) Neighborhood Change:
+   Compare candidate f=0.00132178580486 vs current f=0.00512850610354.
+   Decision: ACCEPT -> reset k=1
+   New current point (0.963719174213695, 0.9285203929291501), Best Fitness=0.00132178580486, next k=1

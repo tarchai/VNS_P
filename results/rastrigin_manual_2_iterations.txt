@@ -1,0 +1,53 @@
+Rastrigin | FIRST TWO ACTUAL VNS ITERATIONS | seed=7
+One iteration = one Shaking + Local Search + acceptance check.
+The sampled Shaking points and LS results below come from run_vns, not invented.
+LS: 8 directions; step starts 0.25, halves when no better neighbor;
+    minimum step 0.0001.
+Numeric expressions show rounded coordinates, final fitness uses full precision.
+For ALL local-search moves, see the corresponding local_trace_seed7.csv file.
+
+====================================================================
+ITERATION 1 | k=1
+1) Current objective:
+   f(-1.000000000, 1.000000000) = 20+(-1.000000000)^2+(1.000000000)^2 -10*[cos(2*pi*(-1.000000000))+cos(2*pi*(1.000000000))] = 20+2-20 = 2
+2) Shaking:
+   Current (-1.0, 1.0) -> Shaking (-1.1192363860708923, 1.238319433064604)
+   f(-1.119236386, 1.238319433) = 20+(-1.119236386)^2+(1.238319433)^2 -10*[cos(2*pi*(-1.119236386))+cos(2*pi*(1.238319433))] = 20+2.786125106-8.055699322 = 14.7304257839
+3) Local Search: accepted better neighbors:
+   move 000: (-1.119236386, 1.238319433), f=14.7304257839, step=0.2500000
+   move 001: (-1.119236386, 0.988319433), f=4.93393830052, step=0.2500000
+   move 002: (-0.994236386, 0.988319433), f=1.99875702335, step=0.1250000
+   move 003: (-0.994236386, 0.996131933), f=1.99029454267, step=0.0078125
+   ... 2 additional moves (see CSV) ...
+   move 006: (-0.994724667, 0.995155371), f=1.9899366438, step=0.0004883
+   move 007: (-0.994968808, 0.994911230), f=1.98991858036, step=0.0002441
+   Total accepted Local Search moves: 7
+   Final local-search evaluation:
+   f(-0.994968808, 0.994911230) = 20+(-0.994968808)^2+(0.994911230)^2 -10*[cos(2*pi*(-0.994968808))+cos(2*pi*(0.994911230))] = 20+1.979811284-19.9898927 = 1.98991858036
+4) Neighborhood Change:
+   Compare candidate f=1.98991858036 vs current f=2.
+   Decision: ACCEPT -> reset k=1
+   New current point (-0.9949688079458923, 0.9949112299396039), Best Fitness=1.98991858036, next k=1
+
+====================================================================
+ITERATION 2 | k=1
+1) Current objective:
+   f(-0.994968808, 0.994911230) = 20+(-0.994968808)^2+(0.994911230)^2 -10*[cos(2*pi*(-0.994968808))+cos(2*pi*(0.994911230))] = 20+1.979811284-19.9898927 = 1.98991858036
+2) Shaking:
+   Current (-0.9949688079458923, 0.9949112299396039) -> Shaking (-1.1377632862261864, 0.7959249665833183)
+   f(-1.137763286, 0.795924967) = 20+(-1.137763286)^2+(0.795924967)^2 -10*[cos(2*pi*(-1.137763286))+cos(2*pi*(0.795924967))] = 20+1.928001848-9.327565756 = 12.6004360918
+3) Local Search: accepted better neighbors:
+   move 000: (-1.137763286, 0.795924967), f=12.6004360918, step=0.2500000
+   move 001: (-0.887763286, 1.045924967), f=4.68072923261, step=0.2500000
+   move 002: (-1.012763286, 1.045924967), f=2.56522619783, step=0.1250000
+   move 003: (-1.012763286, 0.983424967), f=2.07913324542, step=0.0625000
+   ... 4 additional moves (see CSV) ...
+   move 008: (-0.995185161, 0.995143717), f=1.98993508179, step=0.0019531
+   move 009: (-0.994941021, 0.994899576), f=1.98991886743, step=0.0002441
+   Total accepted Local Search moves: 9
+   Final local-search evaluation:
+   f(-0.994941021, 0.994899576) = 20+(-0.994941021)^2+(0.994899576)^2 -10*[cos(2*pi*(-0.994941021))+cos(2*pi*(0.994899576))] = 20+1.979732801-19.98981393 = 1.98991886743
+4) Neighborhood Change:
+   Compare candidate f=1.98991886743 vs current f=1.98991858036.
+   Decision: REJECT -> next k
+   New current point (-0.9949688079458923, 0.9949112299396039), Best Fitness=1.98991858036, next k=2
